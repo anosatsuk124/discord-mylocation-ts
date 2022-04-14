@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { ChakraProvider } from '@chakra-ui/provider';
 import { Box, Code, list, Text } from '@chakra-ui/react';
 import { GetLocation } from './components/GetLocation';
+import { GoogleMap } from './components/GoogleMap';
 
 const App = (): JSX.Element => {
     return (
@@ -11,7 +12,7 @@ const App = (): JSX.Element => {
             <Box>
                 Edit <Code>App.tsx</Code> and save to test HMR updates.
             </Box>
-            <GetLocation />
+            <GoogleMap />
             <p>
                 <a
                     className="App-link"

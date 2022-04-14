@@ -1,11 +1,8 @@
 import { getCurrentPositionPromise } from "./getCurrentPosition";
-import  dotenv from "dotenv";
-dotenv.config();
 
-const endpoint: string = "https://maps.googleapis.com/maps/api/staticmap";
-
-export const MapUrl = async (endpoint: string): Promise<string> => {
-    const API_KEY = process.env.GOOGLE_API;
+export const staticMapUrl = async (): Promise<string> => {
+    const endpoint: string = "https://maps.googleapis.com/maps/api/staticmap";
+    const API_KEY = ""; // Support ...
     const position = await getCurrentPositionPromise;
     const url = `${endpoint}?markers=${position![0]},${
         position![1]
